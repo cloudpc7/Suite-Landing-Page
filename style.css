@@ -449,7 +449,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    min-width: 90rem;
     min-height: 29rem;
     flex-direction: row;
     row-gap: 0;
