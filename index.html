@@ -13,46 +13,38 @@
 </head>
 <body>
   <header class="nav">
-    <img class="logo" src="./assets/logo.svg" alt="logo"/>
-    <button class="access-request">Request Beta Access</button>
+    <img class="logo" src="./assets/logo.svg" alt="suite logo"/>
+    <a href="#" class="access-request">Request Beta Access</a>
   </header>
   <main class="container">
     <section class="beta-container">
       <div class="hero-container">
-        <h1 class="hero-title">A <b>super solution</b> for your <b>business</b>.</h1>
+        <h1 class="hero-title">A <strong>super solution</strong> for your <strong>business</strong>.</h1>
           <div class="hero-content">
             <p class="description">
               Our marketing and sales automations help you scale your outreach to 
               get more leads for your company. 
             </p>
-          <button class="beta-btn">Request Beta Access</button>
+          <a href="#" class="beta-btn">Request Beta Access</a>
           </div>
       </div>
       <picture class="phone">
         <source media="(min-width:48rem)" srcset="./assets/image-hero-portrait.png">
-        <source media="(min-width:90rem)" srcset="./assets/image-hero-portrait.png">
-        <img src="./assets/image-hero-landscape.png" alt="Flowers" >
+        <img src="./assets/image-hero-landscape.png" alt="" >
       </picture>
       <div class="features">
-        <div>
-          <h2 class="feature-title">2K+</h2>     
-          <p class="feature">Companies</p>
-        </div>
-        <div>
-          <h2 class="feature-title"> 8</h2>
-          <p class="feature">Languages</p>
-        </div>
-        <div>
-          <h2 class="feature-title">1.2M</h2>
-          <p class="feature">Leads</p>
-        </div>
+        <ul class="stats-list">
+          <li class="stat-number">2K+ <span>Companies</span></li>     
+          <li class="stat-number">8 <span>Languages</span></li>
+          <li class="stat-number">1.2M <span>Leads</span></li>
+        </ul>
       </div> 
     </section>
     <section class="advertise">
       <picture class="portrait">
-        <source media="(min-width: 90rem)" srcset="./assets/image-jeremy-large@2x.png">
-        <source media="(min-width: 90rem)" srcset="./assets/image-jeremy-large.png">
-        <img   src="assets/image-jeremy-small@2x.png" alt="jeremy"/>
+        <source media="(min-width: 70rem)" srcset="./assets/image-jeremy-large@2x.png">
+        <source media="(min-width: 48rem)" srcset="./assets/image-jeremy-large.png">
+        <img   src="assets/image-jeremy-small.png" alt="jeremy"/>
       </picture>
       <div class="advertise-content">
         <h1 class="brand">It just <b>works.</b></h1>
@@ -69,12 +61,14 @@
     </section>
   </main>
   <footer>
-      <img src="./assets/logo.svg" alt="logo" class="logo">
+    <div class="footer-nav">
+      <img src="./assets/logo.svg" alt="logo" class="logo footer-logo">
       <p class="copyright">Copyright - Suite</p>
-    <div class="social-media">
-      <a href="#"><img src="./assets/icon-facebook.svg" alt="facebook" class="social-media-icon"></a>
-      <a href="#"><img src="./assets/icon-twitter.svg" alt="twitter" class="social-media-icon"></a>
-      <a href="#"><img src="./assets/icon-instagram.svg" alt="instagram" class="social-media-icon"></a>
+      <div class="social-media">
+        <a href="#"><img src="./assets/icon-facebook.svg" alt="facebook" class="social-media-icon"></a>
+        <a href="#"><img src="./assets/icon-twitter.svg" alt="twitter" class="social-media-icon"></a>
+        <a href="#"><img src="./assets/icon-instagram.svg" alt="instagram" class="social-media-icon"></a>
+      </div>
     </div>
   </footer>
   <p class="attribution">

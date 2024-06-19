@@ -87,19 +87,17 @@
   }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
   font-family: 'Epilogue';
   background-color: #FAF8F6;
 }
 
 .nav {
-  min-width: 21.44rem;
+  max-width: 21.44rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
+  margin-inline: auto;
+  padding-top: 2rem;
 }
 
 .logo {
@@ -113,22 +111,22 @@ body {
   padding: 0.79rem 0.88rem;
   background-color: #FAF8F6;
   font-weight: var(--fw-bold);
-  font-size: 14px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: #172339;
 }
 
 .container {
-  max-width: 23.4375rem;
   display: flex;
   flex-direction: column;
   row-gap: 3.5rem;
-  padding-top: 3.5rem;
 }
 
 .beta-container {
-  max-width: 21.4375rem;
   display: grid;
+  margin-top: 3.5rem;
   row-gap: 3.5rem;
-  margin: 0 1rem;
+  padding-inline: 1rem;
 }
 
 .hero-container {
@@ -158,26 +156,23 @@ body {
 
 .beta-btn {
   max-width: 16rem;
-  min-height: 3.8125rem;
   border: none;
   border-radius: 6px;
+  padding: 0.92rem 0;
   background-color: #172339;
-  padding: 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.77;
   letter-spacing: -0.18px;
   color: #fff;
-}
-
-.phone {
-  width: 100%;
+  text-decoration: none;
+  text-align: center;
 }
 
 .features {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   row-gap: 2rem;
 }
 .feature-title {
@@ -186,38 +181,52 @@ body {
   line-height: 1.16;
 }
 
-.feature {
-  font-weight: 400;
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  row-gap: 2rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.16;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number span {
+  font-size: 1rem;
   line-height: 1.62;
   letter-spacing: 0.15625rem;
   color: #49566D;
+  font-weight: 400;
 }
 
 .advertise {
-  min-width: 23.4375rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 11rem;
+  display: grid;
+  grid-auto-flow: row;
+  position: relative;
   border-radius: 0.9375rem;
   background-color: #172339;
+  text-align: center;
+  margin-top: 11rem;
 }
 
 .portrait {
-  width: 15.75rem;
+  justify-self: center;
   position: relative;
   top: -11rem;
 }
 
 .advertise-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   row-gap: 2.5rem;
   position: relative;
   bottom: 4rem;
-  text-align: center;
-  margin: 0 1.125rem;
+  padding-inline: 1rem;
 }
 
 .brand, .opinion, .founder, .founder-title {
@@ -249,25 +258,26 @@ body {
 }
 
 footer {
-  min-width: 23.4375rem;
-  min-height: 26rem;
+  min-height: 26.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 8rem;
-  row-gap: 2.06rem;
   background-color: #F3EdE7;
+  bottom: 8rem;
   z-index: -1;
 }
 
-.suite-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 2rem;
+.footer-nav {
+  display: grid;
   row-gap: 2.06rem;
+  position: absolute;
+  bottom: 4rem;
+  text-align: center;
+}
+
+.footer-logo {
+  justify-self: center;
 }
 
 .copyright {
@@ -279,25 +289,27 @@ footer {
 
 .social-media {
   min-width: 7.25rem;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (min-width: 48rem) {
+
   .nav {
-    min-width: 43rem;
+    max-width: 43.06rem;
+    padding-top: 3.5rem;
   }
 
   .container {
-    max-width: 48rem;
-    margin: 0;
+    row-gap: 5.75rem;
+    padding-inline: 2.5rem;
   }
 
   .beta-container {
-    max-width: 43rem;
-    grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
-    margin: 0 2.5rem;
+    grid-auto-flow: column;
+    padding-inline: 0;
   } 
 
   .hero-container {
@@ -325,59 +337,70 @@ footer {
 
   .phone {
     width: 17.5625rem;
-    height: 30.125rem;
     grid-column-start: 2 ;
     grid-row: 1;
     margin-left: auto;
   }
 
   .features {
-    flex-direction: row;
     grid-row: 2;
     grid-column: 1/3;
     justify-content: space-around;
   }
 
-  .advertise {
-    margin: 13.25rem 2.5rem 0 2.5rem;
+  .stats-list {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
   }
 
   .advertise-content {
-    margin: 0 3.62rem;
+    padding-inline: 4rem;
   }
 
   footer {
+    min-height: 40rem;
+    bottom: 28.94rem;
+  }
+
+  .footer-nav {
     min-width: 48rem;
-    flex-direction: row;
+    grid-auto-flow: column;
+    row-gap: 0;
     justify-content: space-between;
-    padding: 0 2.49rem;
+    bottom: 4.5rem;
+    padding-inline: 2.44rem;
+  }
+
+  .footer-logo {
+    justify-self: unset;
   }
 
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
+
   .nav {
-    min-width: 69rem;
-    margin-top: 4.03rem;
+    max-width: 69rem;
+    
   }
 
   .container {
-    min-width: 90rem;
-    justify-content: center;
-    align-items: center;
+    max-width: 69rem;
+    margin-inline: auto;
+    padding-inline: 0;
   }
 
   .beta-container {
-    min-width: 69rem;
-    min-height: 37.5rem;
-    margin: 0;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 42% 40% 18%;
+    padding: 0;
   }
 
   .hero-container {
-    max-width: 39.6875rem;
-    grid-column: 1 / -1;
-    padding-top: 6.44rem;
+    min-width: 39.6875rem;
+    grid-column: 1 / span 2;
+    padding-top: 6rem;
     row-gap: 2.5rem;
   }
 
@@ -388,7 +411,6 @@ footer {
   }
 
   .hero-content {
-    max-width: 21.875rem;
     row-gap: 3.25rem;
   }
 
@@ -404,36 +426,42 @@ footer {
 
   .phone {
     width: 21.875rem;
-    height: 37.5rem;
     grid-column: 2;
+    margin-left: 0;
   }
 
   .features {
     grid-row: 1;
     grid-column: 3;
+    row-gap: 0;
+  }
+
+  .stats-list {
     flex-direction: column;
   }
 
   .advertise {
-    margin: 12.44rem 0 0 0;
-    min-width: 69rem;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
+    max-height: 34.06rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+
+  .portrait {
+    max-width: 22.48813rem;
+    max-height: 36.84731rem;
+    justify-self: unset;
+    top: -1.5rem;
   }
 
   .advertise-content {
     max-width: 21.875rem;
-    margin: 0;
-    position: static;
-    text-align: left;
-  }
-
-
-  .portrait {
-    width: 22.48813rem;
-    top: -3rem;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    padding-inline: 0;
+    position: unset;
   }
 
   .brand {
@@ -449,14 +477,13 @@ footer {
   }
 
   footer {
-    min-width: 90rem;
     min-height: 29rem;
-    flex-direction: row;
-    row-gap: 0;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10.44rem;
+    bottom: 16rem;
+  }
+
+  .footer-nav {
+    min-width: 69rem;
+    padding: 0;
   }
 
 }
