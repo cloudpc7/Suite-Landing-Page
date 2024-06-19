@@ -117,16 +117,17 @@ body {
 }
 
 .container {
+  max-width: 21.44rem;
   display: flex;
   flex-direction: column;
   row-gap: 3.5rem;
+  margin-inline: auto;
 }
 
 .beta-container {
   display: grid;
   margin-top: 3.5rem;
   row-gap: 3.5rem;
-  padding-inline: 1rem;
 }
 
 .hero-container {
@@ -302,14 +303,13 @@ footer {
   }
 
   .container {
+    max-width: 43.06rem;
     row-gap: 5.75rem;
-    padding-inline: 2.5rem;
   }
 
   .beta-container {
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
-    padding-inline: 0;
   } 
 
   .hero-container {
@@ -370,7 +370,6 @@ footer {
     row-gap: 0;
     justify-content: space-between;
     bottom: 4.5rem;
-    padding-inline: 2.44rem;
   }
 
   .footer-logo {
@@ -383,13 +382,10 @@ footer {
 
   .nav {
     max-width: 69rem;
-    
   }
 
   .container {
     max-width: 69rem;
-    margin-inline: auto;
-    padding-inline: 0;
   }
 
   .beta-container {
